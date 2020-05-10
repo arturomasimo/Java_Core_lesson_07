@@ -5,7 +5,8 @@ public class Su27 extends Plane implements SpecialOpt {
 	private int maxSpeed;
 	private String color;
 	private int poverReserve;
-
+	private ControlPlane planeSu27 = new ControlPlane();
+	
 	public Su27(int maxSpeed, String color) {
 		super();
 		this.maxSpeed = maxSpeed;
@@ -14,7 +15,7 @@ public class Su27 extends Plane implements SpecialOpt {
 
 	public int MoveUp() {
 		System.out.print(getNickName() + ": ");
-		int r = 0, x = ControlPlane.moveUp();
+		int r = 0, x = planeSu27.moveUp();
 		if (getPoverReserve() - x > 0) {
 			r = getPoverReserve() - x;
 			setPoverReserve(r);
@@ -28,7 +29,7 @@ public class Su27 extends Plane implements SpecialOpt {
 
 	public int MoveDovn() {
 		System.out.print(getNickName() + ": ");
-		int r = 0, x = ControlPlane.moveDown();
+		int r = 0, x = planeSu27.moveDown();
 		if (getPoverReserve() - x > 0) {
 			r = getPoverReserve() - x;
 			setPoverReserve(r);
@@ -42,7 +43,7 @@ public class Su27 extends Plane implements SpecialOpt {
 
 	public int MoveLeft() {
 		System.out.print(getNickName() + ": ");
-		int r = 0, x = ControlPlane.moveLeft();
+		int r = 0, x = planeSu27.moveLeft();
 		if (getPoverReserve() - x > 0) {
 			r = getPoverReserve() - x;
 			setPoverReserve(r);
@@ -56,7 +57,7 @@ public class Su27 extends Plane implements SpecialOpt {
 
 	public int MoveRight() {
 		System.out.print(getNickName() + ": ");
-		int r = 0, x = ControlPlane.moveRight();
+		int r = 0, x = planeSu27.moveRight();
 		if (getPoverReserve() - x > 0) {
 			r = getPoverReserve() - x;
 			setPoverReserve(r);
@@ -70,7 +71,7 @@ public class Su27 extends Plane implements SpecialOpt {
 
 	public int MoveForward() {
 		System.out.print(getNickName() + ": ");
-		int r = 0, x = ControlPlane.moveForward();
+		int r = 0, x = planeSu27.moveForward();
 		if (getPoverReserve() - x > 0) {
 			r = getPoverReserve() - x;
 			setPoverReserve(r);
